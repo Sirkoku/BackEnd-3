@@ -28,7 +28,7 @@ res.status(200).json({
 // POST /api/mocks/generateData
 router.post("/generateData", async (req, res) => {
 try {
-    const { users = 0, pets = 0 } = req.body;
+    const { users = 0, pets = 0 } = req.query;
 
     const usersToInsert = generateMockUsers(users).map(user => ({
     first_name: user.first_name,
